@@ -7,7 +7,10 @@ To compare forks of a repository, simply go to `https://gitforks.netlify.app/{us
 
 I do not want to handle authentication for this application, and if I do not cache I will have to call the Github API a lot, so I will be using caching. If you are looking for a specific fork of a repo, it may take up to two hours to show up. I am operating under the assumption that the forks that are most interesting to compare are the ones that differ the most from the original repository, so a newly-created fork will not fall into that category.
 
-
+Changes to `create-react-app` so far: 
+ - Added `src/_redirects`
+ - Deployed to Netlify
+ - Changed the Title
 
 # Getting Started with Create React App
 
