@@ -1,3 +1,14 @@
+# [Gitforks](https://gitforks.netlify.app/)
+### Easily compare forks of a repo on Github
+
+Gitforks is built with `create-react-app`, and it is designed to simplify the process of comparing forks of a repository.
+
+To compare forks of a repository, simply go to `https://gitforks.netlify.app/{username}/{repo}`.
+
+I do not want to handle authentication for this application, and if I do not cache I will have to call the Github API a lot, so I will be using caching. If you are looking for a specific fork of a repo, it may take up to two hours to show up. I am operating under the assumption that the forks that are most interesting to compare are the ones that differ the most from the original repository, so a newly-created fork will not fall into that category.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
