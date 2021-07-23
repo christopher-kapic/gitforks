@@ -20,10 +20,6 @@ exports.handler = async (event, context) => {
     })
 
     let forks = repo_json.data.map((fork) => {
-        // return(octokit.request(`GET /repos/{fullname}/compare/{user}:master...master`, {
-        //     fullname: fork.full_name,
-        //     user: user
-        // }))
         return(fetch(`https://api.github.com/repos/${fork.full_name}/compare/${user}:master...master`, {
             headers: {
                 authorization: `Basic ${GITHUB_KEY_V2}`
@@ -39,26 +35,10 @@ exports.handler = async (event, context) => {
 
     forks_json = await Promise.all(forks_json)
 
-    // repo_json.data.forEach(async (fork) => {
-    //     console.log('here')
-    //     // fetch(`https://api.github.com/repos/${fork.owner.login}/Stocksera/compare/${user}:master...master`)
-    //         // .then(res => res.json())
-    //         .then(json => {
-    //             forks.push(json)
-    //         })
-    //     // const fork_json = await fork_res.json();
-    //     // forks.push(fork_json)
-    // })
-
     return {
         statusCode: 200,
         body: JSON.stringify({
             forks: forks_json
         })
     }
-    // return {
-    //     statusCode: 200,
-    //     body: JSON.stringify(repo_json)
-    // }
-
 }
