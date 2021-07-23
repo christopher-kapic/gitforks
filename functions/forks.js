@@ -9,6 +9,8 @@ const UPSTASH_PW = process.env.UPSTASH_PW;
 exports.handler = async({ body, headers }, context) => {
     const user = body.user
     const repo = body.repo
+
+    console.log(user, repo)
     const repo_res = await fetch(`https://api.github.com/repos/${user}/${repo}/forks`)
     const repo_json = await repo_res.json();
 
