@@ -24,7 +24,6 @@ const styles = {
         outline: 'none',
         fontSize: 24,
         backgroundColor: '#f6f8fa',
-        textAlign: 'center'
     },
     title: {
         fontSize: 64
@@ -46,7 +45,7 @@ const Index = () => {
             <div style={styles.content}>
                 <h1 style={styles.title}>gitforks</h1>
                 <form onSubmit={handleSubmit}>
-                    <input type="text" placeholder="username/repo" value={repo} style={styles.input} onChange={(e) => {setRepo(e.target.value)}}/>
+                    <input type="text" autoFocus placeholder="username/repo" value={repo} style={styles.input} onChange={(e) => {setRepo(e.target.value)}}/>
                 </form>
                 <div>
                     <p>by <Link to="/about">Christopher Kapic</Link></p>
