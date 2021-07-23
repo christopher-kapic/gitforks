@@ -53,7 +53,7 @@ exports.handler = async (event, context) => {
     return {
         statusCode: 200,
         body: JSON.stringify({
-            forks: fork_json
+            forks: forks_json
         })
     }
     // return {
