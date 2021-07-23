@@ -12,6 +12,7 @@ const styles = {
     },
     content: {
         width: 500,
+        maxWidth: '98vw',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
