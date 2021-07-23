@@ -12,7 +12,7 @@ const styles = {
     },
     content: {
         width: 500,
-        maxWidth: '98vw',
+        maxWidth: '100vw',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
@@ -20,13 +20,14 @@ const styles = {
     input: {
         borderStyle: 'none none solid none',
         height: 64,
-        width: '100%',
+        width: '96%',
         outline: 'none',
         fontSize: 24,
         backgroundColor: '#f6f8fa',
     },
     title: {
-        fontSize: 64
+        fontSize: 64,
+        color: '#211f1f'
     }
 }
 const Index = () => {
@@ -44,7 +45,7 @@ const Index = () => {
         <div style={styles.mainDiv}>
             <div style={styles.content}>
                 <h1 style={styles.title}>gitforks</h1>
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} style={{width: '100%'}}>
                     <input type="text" autoFocus placeholder="username/repo" value={repo} style={styles.input} onChange={(e) => {setRepo(e.target.value)}}/>
                 </form>
                 <div>
