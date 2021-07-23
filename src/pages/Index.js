@@ -36,7 +36,7 @@ const Index = () => {
     const history = useHistory();
 
     const handleSubmit = (e) => {
-        history.replace(`/${repo}`);
+        history.push(`/${repo}`);
         e.preventDefault();
     }
 
