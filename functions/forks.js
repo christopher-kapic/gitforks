@@ -1,7 +1,6 @@
 const fetch = require('node-fetch');
 const { Octokit, App, Action } = require("octokit");
-// const GITHUB_KEY = process.env.GITHUB_KEY;
-const GITHUB_KEY = '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'
+const GITHUB_KEY = process.env.GITHUB_KEY;
 const octokit = new Octokit({ auth: GITHUB_KEY })
 
 const UPSTASH_PORT = process.env.UPSTASH_PORT;
