@@ -45,7 +45,7 @@ const Index = () => {
         <div style={styles.mainDiv}>
             <div style={styles.content}>
                 <h1 style={styles.title}>gitforks</h1>
-                <form onSubmit={handleSubmit} style={{width: '100%'}}>
+                <form onSubmit={handleSubmit} style={{width: '100%', display: 'flex', justifyContent: 'center'}}>
                     <input type="text" autoFocus placeholder="username/repo" value={repo} style={styles.input} onChange={(e) => {setRepo(e.target.value)}}/>
                 </form>
                 <div>
