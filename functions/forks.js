@@ -6,7 +6,8 @@ const UPSTASH_UN = process.env.UPSTASH_UN;
 const UPSTASH_PW = process.env.UPSTASH_PW;
 
 
-exports.handler = async({ body, headers }, context) => {
+exports.handler = async(event, context) => {
+    const body = JSON.parse(event.body)
     const user = body.user
     const repo = body.repo
 
