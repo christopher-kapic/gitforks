@@ -1,6 +1,7 @@
 const fetch = require('node-fetch');
 const { Octokit, App, Action } = require("octokit");
-const GITHUB_KEY = process.env.GITHUB_KEY;
+// const GITHUB_KEY = process.env.GITHUB_KEY;
+const GITHUB_KEY = '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'
 const octokit = new Octokit({ auth: GITHUB_KEY })
 
 const UPSTASH_PORT = process.env.UPSTASH_PORT;
@@ -18,31 +19,32 @@ exports.handler = async (event, context) => {
         repo: repo,
     })
 
-    var forks = []
-
-    repo_json.data.forEach(async (fork) => {
-        console.log('here')
-        // fetch(`https://api.github.com/repos/${fork.owner.login}/Stocksera/compare/${user}:master...master`)
-            // .then(res => res.json())
-        octokit.request(`GET /repos/${fork.owner.login}/Stocksera/compare/${user}:master...master`)
-            .then(json => {
-                forks.push(json)
-            })
-        // const fork_json = await fork_res.json();
-        // forks.push(fork_json)
+    let forks = repo_json.data.map((fork) => {
+        octokit.request(`GET /repos/${fork.full_name}/compare/${user}\:master...master`)
     })
 
-    // return {
-    //     statusCode: 200,
-    //     body: JSON.stringify({
-    //         forks: forks
-    //     })
-    // }
+    forks = await Promise.all(forks)
+
+    // repo_json.data.forEach(async (fork) => {
+    //     console.log('here')
+    //     // fetch(`https://api.github.com/repos/${fork.owner.login}/Stocksera/compare/${user}:master...master`)
+    //         // .then(res => res.json())
+    //         .then(json => {
+    //             forks.push(json)
+    //         })
+    //     // const fork_json = await fork_res.json();
+    //     // forks.push(fork_json)
+    // })
+
     return {
         statusCode: 200,
         body: JSON.stringify({
             forks: forks
         })
     }
+    // return {
+    //     statusCode: 200,
+    //     body: JSON.stringify(repo_json)
+    // }
 
 }
