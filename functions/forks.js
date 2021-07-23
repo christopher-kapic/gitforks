@@ -19,7 +19,10 @@ exports.handler = async (event, context) => {
     })
 
     let forks = repo_json.data.map((fork) => {
-        return(octokit.request(`GET /repos/${fork.full_name}/compare/${user}\:master...master`))
+        return(octokit.request(`GET /repos/{fullname}/compare/{user}:master...master`, {
+            fullname: fork.full_name,
+            user: user
+        }))
     })
 
     forks = await Promise.all(forks)
