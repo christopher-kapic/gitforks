@@ -20,7 +20,7 @@ const styles = {
     input: {
         borderStyle: 'none none solid none',
         height: 64,
-        width: '96%',
+        width: '90%',
         outline: 'none',
         fontSize: 24,
         backgroundColor: '#f6f8fa',
