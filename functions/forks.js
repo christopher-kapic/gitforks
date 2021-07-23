@@ -19,6 +19,7 @@ exports.handler = async (event, context) => {
     })
 
     let forks = repo_json.data.map((fork) => {
+        console.log(`GET /repos/${fork.full_name}/compare/${user}\:master...master`)
         octokit.request(`GET /repos/${fork.full_name}/compare/${user}\:master...master`)
     })
 
