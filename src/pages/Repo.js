@@ -17,6 +17,8 @@ const Repo = () => {
             }
         }).then(res => res.json())
             .then(json => setForks(json))
+        
+        setReadme(`https://cdn.jsdelivr.net/gh/${user}/${repo}/README.md`)
     }, [repo, user])
 
     console.log(readme) // Useless, just reading the variable for testing for CI

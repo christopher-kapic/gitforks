@@ -1,5 +1,4 @@
 
-
 const styles = {
     wrapper: {
         width: 'calc(50% - 48px)',
@@ -28,11 +27,11 @@ const getRepoFromUrl = (url) => {
 
 /**
  * 
- * @param {String} url of the form 'https://github.com/user/repo'
+ * @param {String} repo of the form 'user/repo'
  * @returns {String} link to raw readme
  */
-const getReadme = (url) => {
-    return('')
+const getReadme = (repo) => {
+    return(`https://cdn.jsdelivr.net/gh/${repo}/README.md`)
 }
 
 const Forks = (props) => {
@@ -51,10 +50,10 @@ const Forks = (props) => {
                 return(
                 <div style={styles.fork}>
                     <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
-                        <h4 onClick={setReadme(fork.html_url)} style={{cursor: 'pointer'}}>
+                        <h4 onClick={setReadme(getReadme(getRepoFromUrl(fork.html_url)))} style={{cursor: 'pointer'}}>
                             {getRepoFromUrl(fork.html_url)}
                         </h4>
-                        <p>[<a href={fork.html_url.split('/compare/')[0]} onClick={getReadme(fork.html_url)}>Repo</a>]</p>
+                        <p>[<a href={fork.html_url.split('/compare/')[0]}>Repo</a>]</p>
                     </div>
                     <p>Commits ahead: {fork.ahead_by} | Commits behind: {fork.behind_by}</p>
                </div>
