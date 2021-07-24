@@ -32,7 +32,7 @@ const getRepoFromUrl = (url) => {
  * @returns {String} link to raw readme
  */
 const getReadme = (url) => {
-
+    return('')
 }
 
 const Forks = (props) => {
@@ -54,7 +54,7 @@ const Forks = (props) => {
                         <h4 onClick={setReadme(fork.html_url)} style={{cursor: 'pointer'}}>
                             {getRepoFromUrl(fork.html_url)}
                         </h4>
-                        <p>[<a href={fork.html_url.split('/compare/')[0]}>Repo</a>]</p>
+                        <p>[<a href={fork.html_url.split('/compare/')[0]} onClick={getReadme(fork.html_url)}>Repo</a>]</p>
                     </div>
                     <p>Commits ahead: {fork.ahead_by} | Commits behind: {fork.behind_by}</p>
                </div>
