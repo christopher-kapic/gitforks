@@ -1,3 +1,4 @@
+import { useState } from "react"
 
 const styles = {
     wrapper: {
@@ -34,15 +35,20 @@ const getReadme = (repo) => {
     return(`https://cdn.jsdelivr.net/gh/${repo}/README.md`)
 }
 
+const sortForks = (forks) => {
+    let temp_forks = forks;
+    temp_forks.sort((fork_a, fork_b)=> {return(fork_a.ahead_by > fork_b.ahead_by)})
+}
+
 const Forks = (props) => {
-    let forks = props.forks.forks
+    // const [forks, setForks] = useState(props.forks.forks)
+    const forks = sortForks(props.forks.forks)
     const user = props.forks.user
     const repo = props.forks.repo
     const setReadme = props.setReadme
 
-    forks.sort((fork_a, fork_b) => {return (fork_a.ahead_by > fork_b.ahead_by)})
-
     // sort forks by commits ahead
+    console.log(forks)
 
     return(
         <div style={styles.wrapper}>
