@@ -50,10 +50,14 @@ const Forks = (props) => {
             {forks.map((fork) => {
                 return(
                 <div style={styles.fork}>
-                    <h4 onClick={setReadme(fork.html_url)} style={{cursor: 'pointer'}}>
-                        {getRepoFromUrl(fork.html_url)}
-                    </h4>
-                </div>
+                    <div style={{display: 'flex', flexDirection: 'row'}}>
+                        <h4 onClick={setReadme(fork.html_url)} style={{cursor: 'pointer'}}>
+                            {getRepoFromUrl(fork.html_url)}
+                        </h4>
+                        <p>[<a href={fork.html_url.split('/compare/')[0]}>Repo</a>]</p>
+                    </div>
+                    <p>Commits ahead: {fork.ahead_by} | Commits behind: {fork.behind_by}</p>
+               </div>
                 )
             })}
         </div>
