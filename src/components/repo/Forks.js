@@ -1,10 +1,14 @@
 
 
 const styles = {
+    wrapper: {
+        width: '50%',
+        backgroundColor: '#F6F8FA',
+        padding: 48
+    },
     fork: {
-        padding: 10,
-        width: '80%',
-        backgroundColor: '#353535'
+        padding: 24,
+        backgroundColor: '#ffffff'
     }
 }
 
@@ -24,19 +28,19 @@ const Forks = (props) => {
     const repo = props.forks.repo
 
     return(
-        <>
+        <div style={styles.wrapper}>
             <h1><a href={`https://github.com/${user}/${repo}`}>{user}/{repo}</a></h1>
 
             {forks.map((fork) => {
                 return(
                 <div style={styles.fork}>
-                    <h3>
+                    <h4>
                         {getRepoFromUrl(fork.html_url)}
-                    </h3>
+                    </h4>
                 </div>
                 )
             })}
-        </>
+        </div>
     )
 }
 
