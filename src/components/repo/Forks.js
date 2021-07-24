@@ -29,7 +29,7 @@ const Forks = (props) => {
 
             {forks.map((fork) => {
                 return(
-                <div>
+                <div style={styles.fork}>
                     <h3>
                         {getRepoFromUrl(fork.html_url)}
                     </h3>
