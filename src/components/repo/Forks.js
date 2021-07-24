@@ -22,7 +22,7 @@ const styles = {
  */
 const getRepoFromUrl = (url) => {
     const splits = url.split('/')
-    const to_return = splits[3] + splits[4]
+    const to_return = splits[3] + '/' + splits[4]
     return(to_return)
 }
 
@@ -50,7 +50,7 @@ const Forks = (props) => {
             {forks.map((fork) => {
                 return(
                 <div style={styles.fork}>
-                    <div style={{display: 'flex', flexDirection: 'row'}}>
+                    <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
                         <h4 onClick={setReadme(fork.html_url)} style={{cursor: 'pointer'}}>
                             {getRepoFromUrl(fork.html_url)}
                         </h4>

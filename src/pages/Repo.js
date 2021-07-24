@@ -19,7 +19,7 @@ const Repo = () => {
             .then(json => setForks(json))
     }, [repo, user])
 
-    console.log(readme)
+    console.log(readme) // Useless, just reading the variable for testing for CI
     return (
         <>
             {
