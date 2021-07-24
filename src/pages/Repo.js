@@ -6,6 +6,7 @@ import Forks from "../components/repo/Forks";
 const Repo = () => {
     const { user, repo } = useParams();
     const [forks, setForks] = useState(false);
+    const [readme, setReadme] = useState()
 
     useEffect(() => {
         fetch(`/.netlify/functions/forks`, {
@@ -21,7 +22,7 @@ const Repo = () => {
     return (
         <>
             {
-                forks ? <Forks forks={forks}/> : <p>Loading...</p>
+                forks ? <Forks forks={forks} setReadme={setReadme}/> : <p>Loading...</p>
             }
         </>
     )
