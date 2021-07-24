@@ -19,6 +19,7 @@ const Repo = () => {
             .then(json => setForks(json))
     }, [repo, user])
 
+    console.log(readme)
     return (
         <>
             {
