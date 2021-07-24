@@ -4,10 +4,12 @@ const styles = {
     wrapper: {
         width: 'calc(50% - 48px)',
         backgroundColor: '#F6F8FA',
-        padding: 48
+        padding: 48,
+        height: 'calc(100% - 48px)',
+        overflowY: 'scroll'
     },
     fork: {
-        padding: 24,
+        padding: '12px 12px 12px 24px',
         margin: 12,
         borderRadius: 4,
         backgroundColor: '#ffffff'
@@ -20,14 +22,26 @@ const styles = {
  */
 const getRepoFromUrl = (url) => {
     const splits = url.split('/')
-    const to_return = splits[2] + splits[3]
+    const to_return = splits[3] + splits[4]
     return(to_return)
 }
 
+/**
+ * 
+ * @param {String} url of the form 'https://github.com/user/repo'
+ * @returns {String} link to raw readme
+ */
+const getReadme = (url) => {
+
+}
+
 const Forks = (props) => {
-    const forks = props.forks.forks
+    let forks = props.forks.forks
     const user = props.forks.user
     const repo = props.forks.repo
+    const setReadme = props.setReadme
+
+    // sort forks by commits ahead
 
     return(
         <div style={styles.wrapper}>
@@ -36,7 +50,7 @@ const Forks = (props) => {
             {forks.map((fork) => {
                 return(
                 <div style={styles.fork}>
-                    <h4>
+                    <h4 onClick={setReadme(fork.html_url)} style={{cursor: 'pointer'}}>
                         {getRepoFromUrl(fork.html_url)}
                     </h4>
                 </div>
