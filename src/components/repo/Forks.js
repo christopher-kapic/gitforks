@@ -2,12 +2,14 @@
 
 const styles = {
     wrapper: {
-        width: '50%',
+        width: 'calc(50% - 48px)',
         backgroundColor: '#F6F8FA',
         padding: 48
     },
     fork: {
         padding: 24,
+        margin: 12,
+        borderRadius: 4,
         backgroundColor: '#ffffff'
     }
 }
