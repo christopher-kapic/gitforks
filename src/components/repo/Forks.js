@@ -40,6 +40,8 @@ const Forks = (props) => {
     const repo = props.forks.repo
     const setReadme = props.setReadme
 
+    forks.sort((fork_a, fork_b) => {return (fork_a.ahead_by > fork_b.ahead_by)})
+
     // sort forks by commits ahead
 
     return(
