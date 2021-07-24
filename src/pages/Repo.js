@@ -1,10 +1,29 @@
 import { useParams } from "react-router";
+import { useState, useEffect } from "react";
+import fetch from "node-fetch";
+import Forks from "../components/repo/Forks";
 
 const Repo = () => {
     const { user, repo } = useParams();
+    const [forks, setForks] = useState(false);
+
+    useEffect(() => {
+        fetch(`/.netlify/functions/forks`, {
+            method: "POST",
+            headers: {
+                user: user,
+                repo: repo
+            }
+        }).then(res => res.json())
+            .then(json => setForks(json))
+    }, [repo, user])
 
     return (
-        <p>{user}/{repo}</p>
+        <>
+            {
+                forks ? <Forks forks={forks}/> : <p>Loading...</p>
+            }
+        </>
     )
 }
 
