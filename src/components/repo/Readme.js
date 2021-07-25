@@ -4,7 +4,7 @@ import fetch from 'node-fetch'
 const gfm = require('remark-gfm')
 const raw = require('rehype-raw')
 
-const style = {
+const styles = {
     container: {
         height: '100%',
         overflowY: 'scroll'
