@@ -50,7 +50,6 @@ const Forks = (props) => {
 
 
     // sort forks by commits ahead
-    console.log(forks)
 
     return(
         <div style={styles.wrapper}>
@@ -60,7 +59,7 @@ const Forks = (props) => {
                 return(
                 <div style={styles.fork}>
                     <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
-                        <h4 onClick={setReadme(getReadme(getRepoFromUrl(fork.html_url)))} style={{cursor: 'pointer'}}>
+                        <h4 onClick={() => {setReadme(getReadme(getRepoFromUrl(fork.html_url))); console.log('set')}} style={{cursor: 'pointer'}}>
                             {getRepoFromUrl(fork.html_url)}
                         </h4>
                         <p>[<a href={fork.html_url.split('/compare/')[0]}>Repo</a>]</p>
