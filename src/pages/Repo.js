@@ -31,7 +31,7 @@ const Repo = () => {
     }, [repo, user])
 
     return (
-        <div style={}>
+        <div style={styles.mainDiv}>
             {
                 forks ? <Forks forks={forks} setReadme={setReadme}/> : <p>Loading...</p>
             }
