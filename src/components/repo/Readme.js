@@ -6,16 +6,17 @@ const raw = require('rehype-raw')
 
 const styles = {
     container: {
-        height: '100%',
+        maxHeight: '100vh',
+        height: '100vh',
         overflowY: 'scroll'
     }
 }
 
 const Readme = (props) => {
     const [markdown, setMarkdown] = useState('')
-    
+
     useEffect(() => {
-        fetch(props.readme).then(res => res.text).then(md => setMarkdown(md))
+        fetch(props.readme).then(res => res.text()).then(md => setMarkdown(md))
     }, [props.readme])
 
     return(
