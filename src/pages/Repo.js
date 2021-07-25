@@ -6,7 +6,7 @@ import Readme from "../components/repo/Readme";
 
 const styles = {
     mainDiv: {
-        height: '100%',
+        maxHeight: '100vh',
         display: 'flex',
         flexDirection: 'row'
     }
