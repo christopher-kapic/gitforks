@@ -3,6 +3,13 @@ import { useState, useEffect } from 'react'
 import fetch from 'node-fetch'
 
 
+const style = {
+    container: {
+        height: '100%',
+        overflowY: 'scroll'
+    }
+}
+
 const Readme = (props) => {
     const [markdown, setMarkdown] = useState(false)
 
@@ -11,7 +18,9 @@ const Readme = (props) => {
     }, [])
 
     return(
-        <ReactMarkdown remarkPlugins={[gfm]} rehypePlugins={[raw]} children={ markdown }/>
+        <div style={styles.container}>
+            <ReactMarkdown remarkPlugins={[gfm]} rehypePlugins={[raw]} children={ markdown }/>
+        </div>
     )
 }
 
