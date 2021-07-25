@@ -16,7 +16,7 @@ const Readme = (props) => {
 
     useEffect(() => {
         fetch(props.readme).then(res => res.text).then(md => setMarkdown(md))
-    }, [])
+    }, [props.readme])
 
     return(
         <div style={styles.container}>
