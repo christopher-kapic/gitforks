@@ -36,7 +36,7 @@ const getReadme = (repo) => {
 
 const sortForks = (forks) => {
     let temp_forks = forks;
-    temp_forks.sort((fork_a, fork_b)=> {return(fork_a.ahead_by - fork_b.ahead_by)})
+    temp_forks.sort((fork_a, fork_b)=> {return(fork_b.ahead_by - fork_a.ahead_by)})
     return(temp_forks)
 }
 
