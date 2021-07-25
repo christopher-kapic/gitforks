@@ -4,6 +4,14 @@ import fetch from "node-fetch";
 import Forks from "../components/repo/Forks";
 import Readme from "../components/repo/Readme";
 
+const styles = {
+    mainDiv: {
+        height: '100%',
+        display: 'flex',
+        flexDirection: 'row'
+    }
+}
+
 const Repo = () => {
     const { user, repo } = useParams();
     const [forks, setForks] = useState(false);
@@ -23,14 +31,14 @@ const Repo = () => {
     }, [repo, user])
 
     return (
-        <>
+        <div style={}>
             {
                 forks ? <Forks forks={forks} setReadme={setReadme}/> : <p>Loading...</p>
             }
             {
                 forks ? <Readme readme={readme}/> : <></>
             }
-        </>
+        </div>
     )
 }
 
