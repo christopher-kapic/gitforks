@@ -12,8 +12,8 @@ const styles = {
 }
 
 const Readme = (props) => {
-    const [markdown, setMarkdown] = useState(false)
-
+    const [markdown, setMarkdown] = useState('')
+    
     useEffect(() => {
         fetch(props.readme).then(res => res.text).then(md => setMarkdown(md))
     }, [props.readme])
