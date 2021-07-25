@@ -1,7 +1,8 @@
 import ReactMarkdown from 'react-markdown'
 import { useState, useEffect } from 'react'
 import fetch from 'node-fetch'
-
+const gfm = require('remark-gfm')
+const raw = require('rehype-raw')
 
 const style = {
     container: {
