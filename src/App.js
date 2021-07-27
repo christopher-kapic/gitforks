@@ -7,9 +7,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
-    <>
-    <Header />
     <Router>
+      <Header />
       <Switch>
         <Route exact path="/about">
           <About/>
@@ -22,7 +21,6 @@ function App() {
         </Route>
       </Switch>
     </Router>
-    </>
   );
 }
 
