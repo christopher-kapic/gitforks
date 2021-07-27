@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import fetch from 'node-fetch'
 const gfm = require('remark-gfm')
 const raw = require('rehype-raw')
+import 'readme.css'
 
 const styles = {
     container: {
