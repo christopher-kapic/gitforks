@@ -18,7 +18,8 @@ const styles = {
  * @returns {String} Markdown, but image links are updated for raw.githubusercontent
  */
 const updateImageLinks = (md, rm) => {
-    const reg = /^!\[[^\]]*]\(\.\/([a-zA-Z]+(\/[a-zA-Z]+)+)([+-]?(?=\.\d|\d)(?:\d+)?(?:\.?\d*))(?:[eE]([+-]?\d+))?[a-zA-Z]+\)$/gm
+    // const reg = /^!\[[^\]]*]\(\.\/([a-zA-Z]+(\/[a-zA-Z]+)+)([+-]?(?=\.\d|\d)(?:\d+)?(?:\.?\d*))(?:[eE]([+-]?\d+))?[a-zA-Z]+\)$/gm
+    const reg = /^!\[[^\]]*]\(\.\/[^\]]*\)$/gm
 
     let to_return = md;
 

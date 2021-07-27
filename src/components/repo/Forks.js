@@ -11,7 +11,8 @@ const styles = {
         padding: '12px 12px 12px 24px',
         margin: 12,
         borderRadius: 4,
-        backgroundColor: '#ffffff'
+        backgroundColor: '#ffffff',
+        overflowX: 'scroll'
     }
 }
 
