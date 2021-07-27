@@ -32,8 +32,8 @@ const updateImageLinks = (md, rm) => {
     }
 
     to_replace.forEach((img) => {
-        let new_img_arr = img.split('](./')
-        new_img = new_img_arr[1].substring(0, new_img.length - 1);
+        const new_img_arr = img.split('](./')
+        let new_img = new_img_arr[1].substring(0, new_img.length - 1);
         const repo = rm.substring(0, rm.length - 10)
         new_img = `${new_img_arr[0]}](./${repo}/${new_img})`
         console.log(img)
