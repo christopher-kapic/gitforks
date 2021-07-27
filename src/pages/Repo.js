@@ -3,11 +3,16 @@ import { useState, useEffect } from "react";
 import fetch from "node-fetch";
 import Forks from "../components/repo/Forks";
 import Readme from "../components/repo/Readme";
+import Header from "../components/Header"
 
 const styles = {
+    wrapper: {
+        display: 'flex',
+        flexDirection: 'column'
+    },
     mainDiv: {
-        maxHeight: '100vh',
-        height: '100vh',
+        maxHeight: 'calc(100vh - 64px)',
+        height: 'calc(100vh - 64px)',
         display: 'flex',
         flexDirection: 'row'
     }
@@ -32,6 +37,8 @@ const Repo = () => {
     }, [repo, user])
 
     return (
+        <div style={styles.wrapper}>
+        <Header/>
         <div style={styles.mainDiv}>
             {
                 forks ? <Forks forks={forks} setReadme={setReadme}/> : <p style={{margin: '0 auto'}}>Loading...</p>
@@ -39,6 +46,7 @@ const Repo = () => {
             {
                 forks ? <Readme readme={readme}/> : <></>
             }
+        </div>
         </div>
     )
 }
