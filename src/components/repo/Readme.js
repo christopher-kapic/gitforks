@@ -32,9 +32,7 @@ const updateImageLinks = (md, rm) => {
     }
 
     to_replace.forEach((img) => {
-        const new_img_list = img.split('](./')
-        console.log(new_img_list)
-        let new_img = new_img_list[1]
+        let new_img = img.split('](./')[1]
         new_img = new_img.substring(0, new_img.length - 1);
         const repo = rm.substring(0, rm.length - 10)
         new_img = `${repo}/${new_img}`
@@ -49,8 +47,7 @@ const Readme = (props) => {
     const [markdown, setMarkdown] = useState('')
 
     useEffect(() => {
-        fetch(props.readme).then(res => res.text()).then(md => setMarkdown(md))
-        console.log(updateImageLinks(markdown))
+        fetch(props.readme).then(res => res.text()).then(md => setMarkdown(updateImageLinks(md, props.readme)))
     }, [props.readme, markdown])
 
     return(
