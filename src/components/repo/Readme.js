@@ -48,7 +48,8 @@ const Readme = (props) => {
     const [markdown, setMarkdown] = useState('')
 
     useEffect(() => {
-        fetch(props.readme).then(res => res.text()).then(md => setMarkdown(updateImageLinks(md, props.readme)))
+        // fetch(props.readme).then(res => res.text()).then(md => setMarkdown(updateImageLinks(md, props.readme)))
+        fetch(props.readme).then(res => res.text()).then(md => updateImageLinks(md, props.readme)).then(fmd => setMarkdown(fmd))
     }, [props.readme])
 
     return(
