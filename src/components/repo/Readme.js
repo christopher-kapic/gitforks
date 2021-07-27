@@ -23,6 +23,10 @@ const updateImageLinks = (md, rm) => {
 
     const to_replace = md.match(reg);
 
+    if (!to_replace) {
+        return md
+    }
+
     to_replace.forEach((img) => {
         let new_img = img.split(')[./')[1]
         new_img = new_img.substring(0, new_img.length - 1);
