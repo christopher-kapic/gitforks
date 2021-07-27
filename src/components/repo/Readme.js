@@ -37,7 +37,7 @@ const updateImageLinks = (md, rm) => {
         let new_img = new_img_arr[1].substring(0, new_img_arr[1].length - 1);
         const repo = rm.substring(0, rm.length - 10)
         // new_img = `${new_img_arr[0]}](${repo}/${new_img})`
-        new_img = `<img src="${repo}/${new_img}" style="max-width:calc(100%-48px);" max-width="calc(100%-48px)" />`
+        new_img = `<img src="${repo}/${new_img}" style="max-width:500px;"/>`
         console.log(img)
         console.log(new_img)
         to_return = to_return.replace(img, new_img)
