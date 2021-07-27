@@ -4,7 +4,7 @@ const styles = {
         width: 'calc(50% - 48px)',
         backgroundColor: '#F6F8FA',
         padding: 48,
-        height: 'calc(100% - 48px)',
+        height: 'calc(100% - 96px)',
         overflowY: 'scroll'
     },
     fork: {

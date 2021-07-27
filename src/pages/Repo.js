@@ -34,7 +34,7 @@ const Repo = () => {
     return (
         <div style={styles.mainDiv}>
             {
-                forks ? <Forks forks={forks} setReadme={setReadme}/> : <p>Loading...</p>
+                forks ? <Forks forks={forks} setReadme={setReadme}/> : <p style={{margin: '0 auto'}}>Loading...</p>
             }
             {
                 forks ? <Readme readme={readme}/> : <></>
