@@ -42,7 +42,7 @@ const Index = () => {
     }
 
     return (
-        <div style={styles.mainDiv}>
+        <div style={styles.mainDiv} id="mainDiv">
             <div style={styles.content}>
                 <h1 style={styles.title}>gitforks</h1>
                 <form onSubmit={handleSubmit} style={{width: '100%', display: 'flex', justifyContent: 'center'}}>
