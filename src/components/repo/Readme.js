@@ -41,7 +41,7 @@ const Readme = (props) => {
     useEffect(() => {
         fetch(props.readme).then(res => res.text()).then(md => setMarkdown(md))
         console.log(updateImageLinks(markdown))
-    }, [props.readme])
+    }, [props.readme, markdown])
 
     return(
         <div style={styles.container}>
