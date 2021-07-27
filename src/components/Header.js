@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom';
 import logo from '../logo192.png'
 const styles = {
     header: {
-        width: "100vw",
-        padding: "4px 24px 4px 24px",
+        width: "calc(100vw-48px)",
+        padding: "0px 24px 0px 24px",
         height: "64px",
         backgroundColor: "#24292e",
         display: "flex",
