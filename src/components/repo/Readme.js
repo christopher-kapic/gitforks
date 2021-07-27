@@ -36,6 +36,7 @@ const updateImageLinks = (md, rm) => {
         new_img = new_img.substring(0, new_img.length - 1);
         const repo = rm.substring(0, rm.length - 10)
         new_img = `${repo}/${new_img}`
+        console.log(new_img)
         to_return.replace(img, new_img)
     })
 
@@ -48,6 +49,7 @@ const Readme = (props) => {
 
     useEffect(() => {
         fetch(props.readme).then(res => res.text()).then(md => setMarkdown(updateImageLinks(md, props.readme)))
+        console.log(updateImageLinks(md, props.readme))
     }, [props.readme, markdown])
 
     return(
