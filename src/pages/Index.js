@@ -8,6 +8,7 @@ const styles = {
         display: 'flex',
         width: '100vw',
         height: 'calc(100vh-64px)',
+        minHeight: 'calc(100vh - 64px)',
         justifyContent: 'center'
     },
     content: {
