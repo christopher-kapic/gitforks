@@ -8,7 +8,8 @@ const styles = {
     container: {
         maxHeight: '100vh',
         height: '100vh',
-        overflowY: 'scroll'
+        overflowY: 'scroll',
+        padding: '0px 24px 0px 24px'
     }
 }
 
@@ -28,7 +29,9 @@ const updateImageLinks = (md, rm) => {
     }
 
     to_replace.forEach((img) => {
-        let new_img = img.split('](./')[1]
+        const new_img_list = img.split('](./')
+        console.log(new_img_list)
+        let new_img = new_img_list[1]
         new_img = new_img.substring(0, new_img.length - 1);
         const repo = rm.substring(0, rm.length - 10)
         new_img = `${repo}/${new_img}`
