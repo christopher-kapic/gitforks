@@ -3,7 +3,7 @@ import logo from '../logo192.png'
 const styles = {
     header: {
         width: "100vw",
-        pading: "4px 24px 4px 24px",
+        padding: "4px 24px 4px 24px",
         height: "64px",
         backgroundColor: "#24292e",
         display: "flex",

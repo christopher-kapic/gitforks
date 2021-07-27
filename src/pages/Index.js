@@ -7,7 +7,7 @@ const styles = {
         backgroundColor: '#f6f8fa',
         display: 'flex',
         width: '100vw',
-        height: '100vh',
+        height: 'calc(100vh-64px)',
         justifyContent: 'center'
     },
     content: {
