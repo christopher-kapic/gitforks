@@ -54,7 +54,7 @@ const Forks = (props) => {
 
     return(
         <div style={styles.wrapper}>
-            <h1><a href={`https://github.com/${user}/${repo}`}>{user}/{repo}</a></h1>
+            <h1>Repo: <a href={`https://github.com/${user}/${repo}`}>{user}/{repo}</a></h1>
 
             {forks.map((fork) => {
                 return(
