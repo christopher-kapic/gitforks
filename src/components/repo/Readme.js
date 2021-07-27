@@ -6,8 +6,8 @@ const raw = require('rehype-raw')
 
 const styles = {
     container: {
-        maxHeight: '100vh',
-        height: '100vh',
+        maxHeight: '100%',
+        height: '100%',
         overflowY: 'scroll',
         padding: '0px 24px 0px 24px'
     }

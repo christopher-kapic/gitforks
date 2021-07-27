@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom';
 import logo from '../logo192.png'
 const styles = {
     header: {
-        width: "calc(100vw - 24px)",
-        pading: "4px 12px 4px 12px",
+        width: "100vw",
+        pading: "4px 24px 4px 24px",
         height: "64px",
         backgroundColor: "#24292e",
         display: "flex",
@@ -19,7 +19,7 @@ const Header = () => {
             <Link to="/">
                 <img src={logo} alt="logo" height="48px"/>
             </Link>
-            <Link to="/about">About</Link>
+            <Link to="/about" style={{color: '#ffffff'}}>About</Link>
         </div>
     )
 }

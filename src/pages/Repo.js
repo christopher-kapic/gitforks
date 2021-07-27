@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import fetch from "node-fetch";
 import Forks from "../components/repo/Forks";
 import Readme from "../components/repo/Readme";
-import Header from "../components/Header"
 
 const styles = {
     wrapper: {
@@ -37,16 +36,13 @@ const Repo = () => {
     }, [repo, user])
 
     return (
-        <div style={styles.wrapper}>
-        <Header/>
         <div style={styles.mainDiv}>
             {
-                forks ? <Forks forks={forks} setReadme={setReadme}/> : <p style={{margin: '0 auto'}}>Loading...</p>
+                forks ? <Forks forks={forks} setReadme={setReadme}/> : <p style={{margin: '0 auto', top: 100}}>Loading...</p>
             }
             {
                 forks ? <Readme readme={readme}/> : <></>
             }
-        </div>
         </div>
     )
 }
