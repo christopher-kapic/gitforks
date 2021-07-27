@@ -27,6 +27,9 @@ const updateImageLinks = (md, rm) => {
     if (!to_replace) {
         return md
     }
+    if (!rm) {
+        return md
+    }
 
     to_replace.forEach((img) => {
         const new_img_list = img.split('](./')
