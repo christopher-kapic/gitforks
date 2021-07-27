@@ -49,7 +49,7 @@ const Readme = (props) => {
 
     useEffect(() => {
         fetch(props.readme).then(res => res.text()).then(md => setMarkdown(updateImageLinks(md, props.readme)))
-    }, [props.readme, markdown])
+    }, [props.readme])
 
     return(
         <div style={styles.container}>
