@@ -51,6 +51,7 @@ const Index = () => {
                 </form>
                 <div>
                     <p>by <Link to="/about">Christopher Kapic</Link></p>
+                    <p>Currently only works for small repos (TODO: paginate results for repos with many forks).</p>
                 </div>
             </div>
         </div>
