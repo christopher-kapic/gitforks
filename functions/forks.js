@@ -26,7 +26,7 @@ exports.handler = async (event, context) => {
     let forks = []
     let n_forks = min(MAX_FORKS, repo_json.data.length)
     for (i = 0; i < n_forks; i++) {
-        forks[i] = fetch(`https://api.github.com/repos/${forks[i].full_name}/compare/${user}:master...master`, {
+        forks[i] = fetch(`https://api.github.com/repos/${repo_json.data[i].full_name}/compare/${user}:master...master`, {
             headers: {
                 authorization: `Basic ${GITHUB_KEY_V2}`
             }
