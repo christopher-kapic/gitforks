@@ -23,7 +23,7 @@ exports.handler = async (event, context) => {
         repo: repo,
     })
 
-    console.log(repo_json)
+    // console.log(repo_json)
     
     let forks = []
     let n_forks = min(MAX_FORKS, repo_json.data.length)
