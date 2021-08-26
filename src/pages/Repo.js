@@ -34,7 +34,7 @@ const Repo = () => {
           .catch(err => {
               console.log(err);
               window.location.replace("https://gitforks.com/");
-              )
+          })
         
         setReadme(`https://cdn.jsdelivr.net/gh/${user}/${repo}/README.md`)
     }, [repo, user])
