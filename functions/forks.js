@@ -9,7 +9,7 @@ const UPSTASH_PORT = process.env.UPSTASH_PORT;
 const UPSTASH_UN = process.env.UPSTASH_UN;
 const UPSTASH_PW = process.env.UPSTASH_PW;
 
-const MAX_FORKS = process.env.MAX_FORKS; // 40
+const MAX_FORKS = process.env.MAX_FORKS || 40; // 40
 
 exports.handler = async (event, context) => {
     // const body = JSON.parse(event.body)
