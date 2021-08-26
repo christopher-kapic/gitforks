@@ -22,6 +22,8 @@ exports.handler = async (event, context) => {
         owner: user,
         repo: repo,
     })
+
+    console.log(repo_json)
     
     let forks = []
     let n_forks = min(MAX_FORKS, repo_json.data.length)
@@ -48,6 +50,12 @@ exports.handler = async (event, context) => {
     })
 
     forks_json = await Promise.all(forks_json)
+
+    console.log(JSON.stringify({
+        forks: forks_json,
+        user: user,
+        repo: repo
+    }))
 
     return {
         statusCode: 200,
