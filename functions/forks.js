@@ -1,5 +1,5 @@
 const fetch = require('node-fetch');
-import { min } from 'mathjs';
+const { min } = require("mathjs");
 const { Octokit, App, Action } = require("octokit");
 const GITHUB_KEY = process.env.GITHUB_KEY;
 const GITHUB_KEY_V2 = process.env.GITHUB_KEY_V2;
