@@ -30,7 +30,8 @@ const Repo = () => {
                 repo: repo
             }
         }).then(res => res.json())
-            .then(json => setForks(json))
+          .then(json => setForks(json))
+          .catch(err => console.log(err))
         
         setReadme(`https://cdn.jsdelivr.net/gh/${user}/${repo}/README.md`)
     }, [repo, user])
