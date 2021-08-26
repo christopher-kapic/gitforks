@@ -31,7 +31,10 @@ const Repo = () => {
             }
         }).then(res => res.json())
           .then(json => setForks(json))
-          .catch(err => console.log(err))
+          .catch(err => {
+              console.log(err);
+              window.location.replace("https://gitforks.com/");
+              )
         
         setReadme(`https://cdn.jsdelivr.net/gh/${user}/${repo}/README.md`)
     }, [repo, user])
