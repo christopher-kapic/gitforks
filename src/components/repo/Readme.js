@@ -9,7 +9,8 @@ const styles = {
         maxHeight: '100%',
         height: '100%',
         overflowY: 'scroll',
-        padding: '0px 24px 0px 24px'
+        padding: '0px 24px 0px 24px',
+        maxWidth: 'calc(50% - 48px)'
     }
 }
 

@@ -2,6 +2,8 @@
 const styles = {
     wrapper: {
         width: 'calc(50% - 48px)',
+        minWidth: 'calc(50% - 48px)',
+        maxWidth: 'calc(50% - 48px)',
         backgroundColor: '#F6F8FA',
         padding: 48,
         height: 'calc(100% - 96px)',
