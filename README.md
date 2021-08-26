@@ -1,6 +1,8 @@
 # [Gitforks](https://gitforks.netlify.app/)
 ### Easily compare forks of a repo on Github
 
+[See the Plausible analytics for gitforks.com](https://plausible.io/gitforks.com).
+
 Gitforks is built with `create-react-app`, and it is designed to simplify the process of comparing forks of a repository.
 
 To compare forks of a repository, simply go to `https://gitforks.netlify.app/{username}/{repo}`.
