@@ -2,8 +2,7 @@
 ### Easily compare forks of a repo on Github
 
 [![Website](https://img.shields.io/website?down_color=red&down_message=offline&label=gitforks&up_color=green&up_message=up&url=https%3A%2F%2Fgitforks.com)](https://gitforks.com/)
-
-[See the Plausible analytics for gitforks.com](https://plausible.io/gitforks.com).
+[![Website](https://img.shields.io/website?down_color=red&down_message=offline&label=analytics&up_color=violet&up_message=up&url=https%3A%2F%2Fgitforks.com)](https://plausible.io/gitforks.com)
 
 Gitforks is built with `create-react-app`, and it is designed to simplify the process of comparing forks of a repository.
 
