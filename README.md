@@ -1,5 +1,7 @@
-# [Gitforks](https://gitforks.netlify.app/)
+# Gitforks
 ### Easily compare forks of a repo on Github
+
+[![Website](https://img.shields.io/website?down_color=red&down_message=offline&label=gitforks&up_color=green&up_message=up&url=https%3A%2F%2Fgitforks.com)](https://gitforks.com/)
 
 [See the Plausible analytics for gitforks.com](https://plausible.io/gitforks.com).
 
